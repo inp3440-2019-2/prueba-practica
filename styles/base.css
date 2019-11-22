@@ -1,0 +1,187 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #5D5D5F;
+  background-color: white;
+  margin: 0;
+}
+
+main article p {
+  text-align: justify;
+  margin: 0;
+}
+
+main article > div {
+  padding: 30px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main article > div p {
+  line-height: 1.8;
+  order: -1;
+  margin-bottom: 20px;
+}
+
+aside {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+aside article p {
+  font-size: 0.8em;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px 0;
+}
+
+.article-quote {
+  font-size: 2.0em;
+}
+
+.article-quote::before {
+  content: '« ';
+}
+
+.article-quote::after {
+  content: ' »';
+}
+
+/* *********************************************************************** */
+/* Próximos selectores contienen clases que debiesen ser agregadas al HTML */
+/* *********************************************************************** */
+
+main article .cover {
+  height: 400px;
+}
+
+main article .cover h1 {
+  font-size: 2.0em;
+}
+
+main section.comments {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+}
+
+main section.comments h2 {
+  color: black;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0 0 20px;
+}
+
+.comments > div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.comments textarea {
+  margin-bottom: 10px;
+}
+
+.comments button {
+  background-color: #006699;
+  color: white;
+  font-size: 0.8em;
+  padding: 10px 0;
+}
+
+.comments button:focus {
+  outline: none;
+}
+
+.comments .comment-container {
+  padding: 20px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.comments .comment-container:last-child {
+  border-bottom: none;
+  padding-bottom: 30px;
+}
+
+.comments .comment-container .comment-timestamp {
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-bottom: 10px;
+}
+
+.comments .comment-container .comment-body {
+  line-height: 1.5;
+  font-size: 0.8em;
+}
+
+aside .more-items {
+  margin: 0 auto;
+}
+
+aside .more-items article {
+  font-size: 20px;
+  padding: 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.more-items article .item-content {
+  background: white;
+  padding: 10px 10px 20px;
+}
+
+.more-items article .item-content h3 {
+  color: #006699;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+
+.more-items article .item-content p {
+  margin: 0;
+}
+
+footer .footer-content {
+  padding: 10px 20px;
+  font-size: 0.9em;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 501px) {
+  main article > div {
+    padding: 30px 10px;
+  }
+
+  .comments > div {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  main article > div {
+    display: block;
+  }
+
+  main article > div p {
+    margin-bottom: 0;
+  }
+
+  .comments > div {
+    width: 50%;
+  }
+
+  footer .footer-content {
+    width: 90%;
+    padding: 10px;
+  }
+}
